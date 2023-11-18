@@ -1,6 +1,18 @@
 .sectionOne{
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.sectionHide{
+    display: none;
+}
+
+.itemMove{
+    order: -1
+}
+
 
 .sectionTwo{
     display: flex;
@@ -70,6 +82,9 @@
 .itemFour{
     width: 33.3%;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 360px) {
         width: 100%;
@@ -79,6 +94,9 @@
 .itemFive{
     width: 67.7%;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 360px) {
         width: 100%;
@@ -88,3 +106,4 @@
 section{
     border: 1px solid black;
 }
+
