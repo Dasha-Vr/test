@@ -21,3 +21,25 @@ $(document).ready(function() {
     });
   });
 
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("#myForm");
+  
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      fetch("form.php", { 
+        method: "GET",
+        
+      })
+        .then(response => response.text())
+        .then(data  => {
+          alert(data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    });
+  });
