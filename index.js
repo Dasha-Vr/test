@@ -1,5 +1,5 @@
 const button1 = document.querySelector(".btn-warning");
-const button2 = document.querySelector(".btn.btn-success");
+const button2 = document.querySelector(".btn-success");
 const sectionOne = document.querySelector(".sectionOne");
 const itemTwo = document.querySelector(".itemTwo");
 
@@ -10,58 +10,39 @@ const modalWindow = document.querySelector(".modal-window");
 const modalsClose = document.querySelector(".modalsClose");
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    modals.classList.add("modals-visible");
-    modalOverlay.classList.add("modal-visible");
-    modalWindow.classList.add("modals-visible");
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  modals.classList.add("modals-visible");
+  modalOverlay.classList.add("modal-visible");
+  modalWindow.classList.add("modals-visible");
+});
 
 
-// modalsBtn.addEventListener("click", function(){
-//     modals.classList.add("modals-visible");
-//     modalOverlay.classList.add("modal-visible");
-//     modalWindow.classList.add("modals-visible");
-
-// })
-
-modalsClose.addEventListener("click", function(){
-    modals.classList.remove("modals-visible");
-    modalOverlay.classList.remove("modal-visible");
-    modalWindow.classList.remove("modals-visible");
+modalsClose.addEventListener("click", function () {
+  modals.classList.remove("modals-visible");
+  modalOverlay.classList.remove("modal-visible");
+  modalWindow.classList.remove("modals-visible");
 })
 
 
-modalOverlay.addEventListener("click", function(){
-    modals.classList.remove("modals-visible");
-    modalOverlay.classList.remove("modal-visible");
-    modalWindow.classList.remove("modals-visible");
+modalOverlay.addEventListener("click", function () {
+  modals.classList.remove("modals-visible");
+  modalOverlay.classList.remove("modal-visible");
+  modalWindow.classList.remove("modals-visible");
 })
 
-
-
-button1.addEventListener("click", function(){
-    sectionOne.classList.toggle("sectionHide");
+button1.addEventListener("click", function () {
+  sectionOne.classList.toggle("sectionHide");
 })
 
-button2.addEventListener("click", function(){
-    itemTwo.classList.toggle("itemMove");
+button2.addEventListener("click", function () {
+  itemTwo.classList.toggle("itemMove");
 })
-
-
-
-
-// modalsBtn.forEach((el) => {
-//     el.addEventListener ("click", (e) => {
-        
-//     })
-// })
-
 
 
 if (window.jQuery) {
-    console.log("Hello world!")
-  } else {
-    console.log("Hello!")
-  }
+  console.log("Hello world!")
+} else {
+  console.log("Hello!")
+}
 
 

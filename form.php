@@ -1,12 +1,9 @@
-<?php
-// Получить данные из GET-запроса
-$data = $_GET;
-
-// Обработка данных и формирование ответа
-$response = "Данные успешно получены: " . json_encode($data);
-
-// Вернуть ответ
-echo $response;
-?>
-
-    
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Тестируем PHP</title>
+    </head>
+    <body>
+        <?php echo '<p>Привет, мир!</p>'; ?>
+    </body>
+</html>
