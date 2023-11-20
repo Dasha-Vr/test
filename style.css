@@ -130,7 +130,7 @@ section {
 
 .modal-window {
     position: relative;
-    background-color: white;
+    color: white;
     width: 300px;
     height: 300px;
     display: flex;
@@ -141,12 +141,12 @@ section {
 }
 
 
-.modalText {
+/* .modalText {
     text-align: center;
-}
+} */
 
 .modals-visible {
-    display: block;
+    display: flex;
 }
 
 

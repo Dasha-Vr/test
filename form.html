@@ -5,13 +5,15 @@
     <title>Форма</title>
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="form.js"></script>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Форма</h1>
+    <h1 class="title">Форма</h1>
     <form id="myForm" action="form.php" class="form">
-        <label for="select1">Cписок1</label>
-        <select id="select1" name="list1">
+        <label for="select1">Cписок 1</label>
+        <select id="select1" class="form-select-lg select bg-warning" name="list1">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -19,8 +21,8 @@
             <option value="5">5</option>
         </select>
         <br>
-        <label for="select2">Cписок2</label>
-        <select id="select2" name="list2">
+        <label for="select2">Cписок 2</label>
+        <select id="select2" class="select bg-success" name="list2">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -28,8 +30,8 @@
             <option value="5">5</option>
         </select>
         <br>
-        <label for="select2">Cписок3</label>
-        <select id="select2" name="list3">
+        <label for="select2">Cписок 3</label>
+        <select id="select2" class="select bg-primary" name="list3">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -37,8 +39,8 @@
             <option value="5">5</option>
         </select>
         <br>
-        <label for="select4">Cписок4</label>
-        <select id="select4" name="list4">
+        <label for="select4">Cписок 4</label>
+        <select id="select4" class="select bg-danger" name="list4">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -46,8 +48,8 @@
             <option value="5">5</option>
         </select>
         <br>
-        <label for="select5">Cписок5</label>
-        <select id="select5" name="list5">
+        <label for="select5">Cписок 5</label>
+        <select id="select5" class="select bg-secondary" name="list5">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -55,15 +57,16 @@
             <option value="5">5</option>
         </select>
         <br>
-        <label for="input1">Поле1</label>
-        <input type="text" id="input1" name="input1">
+        <label for="input1">Поле 1</label>
+        <input type="text" class="form-input" id="input1" name="input1">
         <br>
-        <label for="input2">Поле2</label>
-        <input type="text" id="input2" name="input2">
+        <label for="input2">Поле 2</label>
+        <input type="text" class="form-input" id="input2" name="input2">
         <br>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="form-btn btn-primary">Отправить</button>
     </form>
-    <div id="jsonOutput"></div>
+    <div id="jsonOutput" class="json"></div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,36 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.select {
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+
+.form-input{
+    margin-bottom: 30px;
+}
+
+
+.title{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.form-btn{
+    border-radius: 20px;
+}
+
+.json{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-input{
+    border-radius: 20px;
+}
