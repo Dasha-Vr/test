@@ -23,38 +23,26 @@
     width: 33.3%;
     height: 200px;
     background-color: blueviolet;
-
-    @media (max-width: 380px) {
-        width: 100%;
-    }
 }
+
 
 .itemTwo {
     width: 33.3%;
     height: 200px;
     background-color: rgb(255, 80, 223);
     border: 1px dashed black !important;
-
-
-    @media (max-width: 380px) {
-        width: 100%;
-    }
 }
+
 
 .itemThree {
     width: 33.3%;
     height: 200px;
     background-color: rgb(223, 59, 89);
-
-    @media (max-width: 380px) {
-        width: 100%;
-    }
 }
 
 
 .sectionThree {
     display: flex;
-
 
     @media (max-width: 380px) {
         flex-direction: column;
@@ -72,10 +60,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 380px) {
-        width: 100%;
-    }
 }
 
 
@@ -85,23 +69,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 380px) {
-        width: 100%;
-    }
 }
 
 
 section {
     border: 1px solid black;
-}
-
-
-.modalsBtn {
-    border: none;
-    background-color: #000000;
-    color: white;
-    padding: 10px;
 }
 
 
@@ -122,9 +94,6 @@ section {
     align-items: center;
     height: 100vh;
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
 }
 
 
@@ -136,30 +105,17 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
-    border-radius:  10px;
+    border-radius: 10px;
 }
 
-
-/* .modalText {
-    text-align: center;
-} */
 
 .modals-visible {
     display: flex;
 }
 
 
-.modal-visible {
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease-in-out;
-}
-
-
 .modalsClose {
     background-image: url(images/close.svg);
-    /* background-size: contain; */
     background-repeat: no-repeat;
     right: 0px;
     top: 0px;
@@ -173,6 +129,13 @@ section {
 }
 
 
+.adaptive {
+    @media (max-width: 380px) {
+        width: 100%;
+    }
+}
+
+
 .sectionHide {
     display: none;
 }
@@ -180,4 +143,9 @@ section {
 
 .itemMove {
     order: -1
+}
+
+
+.overflowHidden {
+    overflow: hidden;
 }
