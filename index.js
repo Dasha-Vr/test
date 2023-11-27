@@ -1,6 +1,6 @@
-const modals = document.querySelector(".modals");
+const modal = document.querySelector(".modal");
 const body = document.querySelector("body");
-const modalsClose = document.querySelector(".modalsClose");
+const modalClose = document.querySelector(".modalClose");
 const modalOverlay = document.querySelector(".modal-overlay");
 
 const button1 = document.querySelector(".btn-warning");
@@ -10,14 +10,14 @@ const itemTwo = document.querySelector(".itemTwo");
 
 
 function modalToggle() {
-  modals.classList.toggle("modals-visible");
+  modal.classList.toggle("modal-visible");
   body.classList.toggle("overflowHidden");
 }
 
 
 document.addEventListener("DOMContentLoaded", modalToggle);
 
-modalsClose.addEventListener("click", modalToggle);
+modalClose.addEventListener("click", modalToggle);
 
 modalOverlay.addEventListener("click", function (event) {
   if (!event.target.closest('.modal-window')) {
