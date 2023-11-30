@@ -22,7 +22,7 @@ $(document).ready(function () {
       data: jsonData,
 
       success: function (response) {
-        alert(response.answer);
+        alert(response[0].answer);
       },
       error: function (error) {
         console.error(error);
@@ -30,8 +30,4 @@ $(document).ready(function () {
     });
   });
 });
-
-
-
-
 
