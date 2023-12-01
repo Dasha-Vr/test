@@ -1,33 +1,32 @@
 
-$(document).ready(function () {
-  // Обработчик события отправки формы
-  $("#myForm").submit(function (event) {
-    event.preventDefault(); // Отменить отправку формы
+const getData = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Could not fetch ${url}, status: ${response.status}`);
+  }
+  const res = await response.json();
+  alert(res[0].answer);
+  return res;
+};
 
-    // Получить данные формы
-    const formData = $(this).serializeArray();
 
-    // Преобразование данных в JSON-структуру
-    const jsonData = {};
-    $.each(formData, function (index, field) {
-      jsonData[field.name] = field.value;
-    });
+const sendCard = () => {
 
-    // Вывод JSON-структуры на экран
-    $("#jsonOutput").text(JSON.stringify(jsonData));
+  const cardForm = document.querySelector(".form");
 
-    $.ajax({
-      url: "form.json",
-      type: "GET",
-      data: jsonData,
+  cardForm.addEventListener("submit", e => {
+    e.preventDefault();
 
-      success: function (response) {
-        alert(response[0].answer);
-      },
-      error: function (error) {
-        console.error(error);
-      }
-    });
+    const formData = new FormData(cardForm);
+    const jsonData = Object.fromEntries(formData);
+
+    const json = document.querySelector(".json");
+
+    json.textContent = JSON.stringify(jsonData);
+
+    getData("form.json");
+
   });
-});
+}
 
+sendCard();
