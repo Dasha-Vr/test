@@ -1,4 +1,4 @@
-const modal = document.querySelector(".modal");
+const blockHide = document.querySelector(".blockHide");
 const modalClose = document.querySelector(".modalClose");
 const modalOverlay = document.querySelector(".modal-overlay");
 
@@ -8,29 +8,28 @@ const blockOne = document.querySelector(".blockOne");
 const itemTwo = document.querySelector(".itemTwo");
 
 
-function modalToggle() {
-  modal.classList.toggle("modal-visible");
+function blockToggle() {
+  blockHide.classList.toggle("blockHide");
 }
 
+document.addEventListener("DOMContentLoaded", blockToggle);
 
-document.addEventListener("DOMContentLoaded", modalToggle);
-
-modalClose.addEventListener("click", modalToggle);
+modalClose.addEventListener("click", blockToggle);
 
 modalOverlay.addEventListener("click", function (event) {
   if (!event.target.closest('.modal-window')) {
-    modalToggle();
+    blockToggle();
   }
 });
 
 
 button1.addEventListener("click", function () {
   blockOne.classList.toggle("blockHide");
-})
+});
 
 button2.addEventListener("click", function () {
   itemTwo.classList.toggle("itemMove");
-})
+});
 
 
 

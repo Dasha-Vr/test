@@ -1,6 +1,18 @@
+const cardForm = document.querySelector(".form");
+const json = document.querySelector(".json");
+const url = "form.json";
 
 const getData = async (url) => {
-  const response = await fetch(url);
+  let formData = new FormData(cardForm);
+  let jsonData = Object.fromEntries(formData);
+  json.textContent = JSON.stringify(jsonData);
+
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(jsonData)) {
+    params.append(key, value);
+  }
+
+  const response = await fetch(`${url}?${params.toString()}`);
   if (!response.ok) {
     throw new Error(`Could not fetch ${url}, status: ${response.status}`);
   }
@@ -10,23 +22,9 @@ const getData = async (url) => {
 };
 
 
-const sendCard = () => {
+cardForm.addEventListener("submit", e => {
+  e.preventDefault();
+  getData(url);
+});
 
-  const cardForm = document.querySelector(".form");
 
-  cardForm.addEventListener("submit", e => {
-    e.preventDefault();
-
-    const formData = new FormData(cardForm);
-    const jsonData = Object.fromEntries(formData);
-
-    const json = document.querySelector(".json");
-
-    json.textContent = JSON.stringify(jsonData);
-
-    getData("form.json");
-
-  });
-}
-
-sendCard();

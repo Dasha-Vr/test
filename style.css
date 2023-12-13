@@ -7,83 +7,54 @@
 }
 
 
-.blockTwo {
+.blockTwo,
+.blockThree{
     display: flex;
+}
 
-    @media (max-width: 380px) {
-        flex-direction: column;
-    }
 
-    >div {
-        border: 1px solid black;
-
-        @media (max-width: 380px) {
-            width: 100%;
-        }
-    }
+.itemOne,
+.itemTwo,
+.itemThree {
+    width: 33.3%;
+    height: 200px;
 }
 
 
 .itemOne {
-    width: 33.3%;
-    height: 200px;
     background-color: blueviolet;
+    border: 1px solid black;
 }
 
 
 .itemTwo {
-    width: 33.3%;
-    height: 200px;
     background-color: rgb(255, 80, 223);
-    border: 1px dashed black !important;
+    border: 1px dashed black;
 }
 
 
 .itemThree {
-    width: 33.3%;
-    height: 200px;
     background-color: rgb(223, 59, 89);
+    border: 1px solid black;
 }
 
 
-.blockThree {
-    display: flex;
-
-    @media (max-width: 380px) {
-        flex-direction: column;
-    }
-
-    >div {
-        border: 1px solid black;
-
-        @media (max-width: 380px) {
-            width: 100%;
-        }
-    }
-}
-
-
-.itemFour {
-    width: 33.3%;
+.itemFour,
+.itemFive{
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
+}
+
+.itemFour {
+    width: 33.3%;
 }
 
 
 .itemFive {
     width: 66.7%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.modal {
-    display: none;
 }
 
 
@@ -91,8 +62,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -106,21 +75,11 @@
     color: white;
     width: 300px;
     height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     border-radius: 10px;
 }
 
-
-.modal-visible {
-    display: flex;
-}
-
-
 .modalClose {
-    margin-bottom: 260px;
-    margin-left: 270px;
     background-image: url(images/close.svg);
     background-repeat: no-repeat;
     width: 20px;
@@ -129,8 +88,15 @@
     border: none;
     background-color: inherit;
     border-radius: 10px;
+    float: right;
 }
 
+
+.modalText{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 130px;
+}
 
 
 .blockHide {
@@ -140,4 +106,15 @@
 
 .itemMove {
     order: -1;
+}
+
+
+@media (max-width: 380px) {
+    .itemOne, .itemTwo, .itemThree, .itemFour, .itemFive {
+        width: 100%;
+    }
+
+    .blockTwo, .blockThree {
+        flex-direction: column;
+    }
 }
