@@ -25,6 +25,7 @@ const getData = async (url) => {
 cardForm.addEventListener("submit", e => {
   e.preventDefault();
   getData(url);
+  cardForm.reset();
 });
 
 
